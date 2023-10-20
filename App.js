@@ -1,19 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import Intro from './src/screens/introScreen/intro';
+import OnBoarding from './src/screens/introScreen/onBoarding';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Finished IOS setup</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <StatusBar style="light" />
+      <Intro />
+      {/* <OnBoarding /> */}
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#121212',
     alignItems: 'center',
     justifyContent: 'center',
   },
